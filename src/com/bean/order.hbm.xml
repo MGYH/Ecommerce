@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping package="com.bean">
+    	<class name="com.bean.Order" table="order">
+    		<id name="id" column="id">
+    		<generator class="native" />
+    		</id>
+    		<many-to-one name="customer" class="com.bean.Customer" column="cid"></many-to-one>
+    		<many-to-one name="product" class="com.bean.Product" column="pid"></many-to-one>
+    		
+    	</class>
+    </hibernate-mapping>
